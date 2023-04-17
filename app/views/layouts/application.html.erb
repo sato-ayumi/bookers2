@@ -25,21 +25,25 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li>
+              <i class="fas fa-home" style="color: #f9fafa;"></i>
+              <%= link_to "Home", user_path(current_user.id) %> 
+            </li>
+            <li>
               <i class="fas fa-sign-out-alt" style="color: #f9fafb;"></i>
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
             </li>
             <% else %>
             <li>
               <i class="fas fa-home" style="color: #f9fafa;"></i>
-              <%= link_to "Home  ", root_path %>
+              <%= link_to "Home", root_path %>
             </li>
             <li>
               <i class="fas fa-paperclip" style="color: #f9fafb;"></i>
-              <%= link_to "About  ", about_path %>
+              <%= link_to "About", about_path %>
             </li>
             <li>
               <i class="fas fa-user-plus" style="color: #f8f9fc;"></i>
-              <%= link_to "Sign up  ", new_user_registration_path %>
+              <%= link_to "Sign up", new_user_registration_path %>
             </li>
             <li>
                <i class="fas fa-sign-in-alt" style="color: #ffffff;"></i>
