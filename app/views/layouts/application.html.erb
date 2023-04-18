@@ -29,6 +29,10 @@
               <%= link_to "Home", user_path(current_user.id) %> 
             </li>
             <li>
+              <i class="fas fa-book-open" style="color: #f6f7f9;"></i>
+              <%= link_to "Books", books_path %> 
+            </li>
+            <li>
               <i class="fas fa-sign-out-alt" style="color: #f9fafb;"></i>
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
             </li>
